@@ -58,6 +58,10 @@ class Risk_Analytics:
                                     seen.add(row)
                                     writer.writerow(row)
 
+                        # Removing the old file and renaming the new_Combined.csv into Combined.csv file
+                        os.remove(self.file_name)
+                        os.rename('new_Combined.csv', 'Combined.csv')
+
                 else:
                     print(f"There is no new files to be processed...")
             else:
